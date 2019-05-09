@@ -39,7 +39,12 @@ RUN pip3 install httplib2 \
     xlwt \
     lxml
 
-RUN pip3 install statsmodels
+RUN pip3 install statsmodels \
+    pdpbox
+
+#RUN mkdir -p build/bdist.linux-x86_64/wheel
+
+#RUN pip3 install --install-option="--prefix=/root/build/bdist.linux-x86_64/wheel" skater==1.1.2 --force-reinstall
 
 #RUN useradd docker -u 1000 -s /bin/bash -m
 #USER docker
